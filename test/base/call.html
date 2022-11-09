@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手写call</title>
+    <script src="/src/base/call.js">
+        function Guizimo(name, age) {
+          this.name = name
+          this.age = age
+        }
+
+        function Zimo(name, age) {j
+          Guizimo.call(this, name, age)
+          this.sex = 'man'
+        }
+
+        console.log(new Zimo('guizimo', '24'))
+        // Zimo{name: 'guizimo', age: '24', sex: 'man'}
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>

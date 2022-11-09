@@ -1,0 +1,4 @@
+
+Function.prototype.myCall = function () {
+
+}
