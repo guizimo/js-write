@@ -6,23 +6,121 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>手写call</title>
-    <script src="/src/base/call.js">
-        function Guizimo(name, age) {
-          this.name = name
-          this.age = age
-        }
+    <script src="../../src/base/call.js"></script>
+    <script>
 
-        function Zimo(name, age) {j
-          Guizimo.call(this, name, age)
-          this.sex = 'man'
-        }
+      /**
+       * @id 1
+       * @description call的使用场景
+       */
 
-        console.log(new Zimo('guizimo', '24'))
-        // Zimo{name: 'guizimo', age: '24', sex: 'man'}
+      // function Guizimo(name, age) {
+      //   this.name = name
+      //   this.age = age
+      // }
+      //
+      // function Zimo(name, age) {
+      //   // 使用自定义的call方法
+      //   Guizimo.call(this, name, age)
+      //   Guizimo.myCall1(this, name, age)
+      //   Guizimo.myCall1Plus(this, name, age)
+      //   this.sex = 'man'
+      // }
+      //
+      // console.log(new Zimo('guizimo', '2777'))
+      // // Zimo{name: 'guizimo', age: '24', sex: 'man'}
+
+
+
+
+      /**
+       * @id 2
+       * @description 调用父构造函数
+       */
+
+      // // 父构造方法
+      // function Father (name, age) {
+      //   this.name = name
+      //   this.age = age
+      // }
+      //
+      // // 子构造方法
+      // function Child(name, age) {
+      //   Father.call(this, name, age)
+      //   Father.myCall(this, name, age)
+      //   Father.myCallPlus(this, name, age)
+      //   this.sex = 'man'
+      // }
+      //
+      // console.log(new Child('guizimo', '24'))
+      // // Child {name: 'guizimo', age: '24', sex: 'man'}
+
+      /**
+       * @id 3
+       * @description 设置指定的上下文this
+       */
+      //
+      // const obj = {
+      //   name: 'guizimo',
+      //   age: '24'
+      // };  // 此处;不可省略
+      //
+      // (function (id) {
+      //   this.print = function () {
+      //     console.log(`id : ${id} ${this.name} : ${this.age}`);
+      //   };
+      //   this.print();
+      // }).call(obj, 1);
+      //
+      // // id : 1 guizimo : 24
+
+
+      /**
+       * @id 4
+       * @description 设置指定的上下文this
+       */
+
+      // const obj = {
+      //   name: 'guizimo',
+      //   description: 'a good boy'
+      // };
+      //
+      // function fn() {
+      //   let reply = [this.name, 'is', this.description].join(' ');
+      //   console.log(reply);
+      // }
+      //
+      // fn.call(obj);
+      // fn.myCall(obj);
+      // fn.myCallPlus(obj);
+      // // guizimo is a good boy
+
+
+
+
+
+      /**
+       * @id 5
+       * @description 使用call不携带this参数
+       */
+
+        // 'use strict'
+
+      var name = 'guizimo' // 注意这里使用 var 来声明
+
+      function fn() {
+        console.log(`${this.name} is a good boy`)
+      }
+
+      fn.call()
+      // fn.myCall()
+      // fn.myCallPlus()
+      // guizimo is a good boy
+
+
     </script>
 </head>
 <body>
-
 
 
 </body>
