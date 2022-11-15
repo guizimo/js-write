@@ -8,19 +8,70 @@
     <title>手写bind</title>
     <script src="../../src/base/bind.js"></script>
     <script>
-      this.name = 'guizimo'
-      let obj = {
-        name: 'zimo',
-        getName: function() {return this.name}
+      /**
+       * @id 1
+       * @description 创建绑定函数
+       */
+      // this.name = 'guizimo'
+      // let obj = {
+      //   name: 'zimo',
+      //   getName: function() {return this.name}
+      // }
+      //
+      // console.log(obj.getName())    // zimo
+      //
+      // let newGetName = obj.getName
+      // console.log(newGetName())     // guizimo
+      //
+      // let bindGetName = newGetName.myBind(obj)
+      // console.log(bindGetName())     // zimo
+
+      /**
+       * @id 2
+       * @description 创建偏函数
+       */
+
+      // function add (a, b) {
+      //   return a + b
+      // }
+      //
+      // const res1 = add(1, 2) // 3
+      // console.log(res1)
+      //
+      // // 创建一个偏函数，将1作为预设的参数
+      // const addP = add.myBind(null, 1)
+      //
+      // const res2 = addP(2)
+      // console.log(res2)
+      //
+      // const res3 = addP(3)
+      // console.log(res3)
+      //
+      // const res4 = addP(4)
+      // console.log(res4)
+
+
+      /**
+       * @id 3
+       * @description 配合SetTimeout使用
+       */
+
+      function GetCurTime () {
+        this.time = new Date().getTime()
       }
 
-      console.log(obj.getName())    // zimo
+      GetCurTime.prototype.bloom = function () {
+        window.setTimeout(this.declare.myBind(this), 1000)
+      }
 
-      let newGetName = obj.getName
-      console.log(newGetName())     // guizimo
+      GetCurTime.prototype.declare = function () {
+        console.log(`this time is ${this.time}`)
+      }
 
-      let bindGetName = newGetName.bind(obj)
-      console.log(bindGetName())     // zimo
+      const flower = new GetCurTime()
+      flower.bloom()
+      // this time is 1668396357884
+
 
     </script>
 </head>
