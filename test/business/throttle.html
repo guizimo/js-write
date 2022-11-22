@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手写throttle</title>
+    <script src="../../src/business/throttle.js"></script>
+</head>
+<body>
+<input class="input">
+</body>
+<script>
+  const inputElm = document.querySelector('input')
+
+  let count = 0
+
+  function search(event) {
+    console.log(`第${count++}次触发，值为${this.value}`,event)
+  }
+
+  // inputElm.oninput = search
+  // 添加防抖
+  inputElm.oninput = myThrottle(search, 1000)
+</script>
+</html>
