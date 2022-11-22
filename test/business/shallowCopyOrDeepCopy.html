@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shallowCopy or deepCopy</title>
+</head>
+<script src="../../src/business/shallowCopy.js"></script>
+<script src="../../src/business/deepCopy.js"></script>
+<script>
+    const arr = {
+      a: '111',
+      b: '222',
+      d: undefined,
+      c: function () {
+        console.log('2222')
+      }
+    }
+
+    // const arr1 = deepCopy(arr)
+    const arr1 = JSON.parse(JSON.stringify(arr))
+
+    arr1.a = '3333'
+
+    console.log(arr.a, arr1)
+    arr1.c()
+</script>
+<body>
+
+</body>
+</html>
