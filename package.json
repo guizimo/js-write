@@ -1,0 +1,23 @@
+{
+  "name": "js-write",
+  "version": "1.0.1",
+  "description": "JS手写题",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guizimo/js-write.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guizimo/js-write/issues"
+  },
+  "homepage": "https://github.com/guizimo/js-write#readme"
+}
