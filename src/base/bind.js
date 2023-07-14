@@ -3,8 +3,9 @@
  * @returns {function(): any}
  */
 Function.prototype.myBind = function () {
-  // 处理函数
+  // 拿到所有的参数，转化为数组
   let args = Array.from(arguments);
+  // 取出thisArg
   let thisArg = args.shift();
   // 暂存this
   let thisFunc = this;
@@ -17,6 +18,6 @@ Function.prototype.myBind = function () {
   }
   // 直接将原函数的prototype赋值给绑定函数
   fBound.prototype = this.prototype;
-  // 返回
+  // 返回闭包函数
   return fBound;
 }
