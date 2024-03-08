@@ -8,12 +8,14 @@
 4. [手写call](./demo/base/call.html)
 5. [手写apply](./demo/base/apply.html)
 6. [手写bind](./demo/base/bind.html)
+7. [手写类型判断](./demo/base/getType.html)
 
 ## JS场景题
 
 1. [手写防抖](./demo/business/debounce.html)
 2. [手写节流](./demo/business/throttle.html)
 3. [手写浅拷贝和深拷贝](./demo/business/shallowCopyOrDeepCopy.html)
+
 
 
 ## 待实现

@@ -3,11 +3,8 @@ const getType = (value) => {
     return '' + null
   }
   if (typeof value === 'object') {
-    const valueClass = Object.prototype.toString.call(value)
-    const type = valueClass.split(" ")[1].split("")
-    console.log(valueClass, type)
-    type.pop()
-    return type.join("").toLowerCase()
+    const valueClass = Object.prototype.toString.call(value).slice(8, -1)
+    return valueClass.toLowerCase()
   } else {
     return typeof value
   }
