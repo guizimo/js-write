@@ -9,6 +9,7 @@
 5. **手写apply**：[代码](./src/base/apply.js)、[调试](./demo/base/apply.html)
 6. **手写new**：[代码](./src/base/bind.js)、[调试](./demo/base/bind.html)
 7. **手写getType**：[代码](./src/base/getType.js)、[调试](./demo/base/getType.html)
+8. **手写assign**：[代码](./src/base/assign.js)、[调试](./demo/base/assign.html)
 
 ## JS场景题
 

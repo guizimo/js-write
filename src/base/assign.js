@@ -1,5 +1,5 @@
 
-const myAssgin = (target, ...source) => {
+const myAssign = (target, ...source) => {
   if (!source) {
     throw new TypeError('type error')
   }
