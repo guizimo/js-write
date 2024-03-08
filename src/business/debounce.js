@@ -19,7 +19,6 @@ const myDebounce = (fn, wait) => {
     timer = setTimeout(() => {
       fn.apply(context, args)
     }, wait)
-    return fn
   }
 }
 
@@ -57,3 +56,17 @@ const myDebouncePlus = (fn, wait, immediate = false) => {
   return _debounce
 }
 
+const mdebounce = (fn, wait) => {
+  let timer = null
+  return function () {
+    let context = this
+    let args = arguments
+    if (timer) {
+      clearTimeout(timer)
+      timer = null
+    }
+    timer = setTimeout(() => {
+      fn.apply(context, args)
+    }, wait)
+  }
+}

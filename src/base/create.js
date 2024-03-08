@@ -4,7 +4,17 @@
  * @returns {Fn}
  */
 const myCreate = (obj) => {
-  function Fn () {}
+  function Fn() {
+  }
+
+  Fn.prototype = obj
+  return new Fn()
+}
+
+const mCreate = (obj) => {
+  function Fn() {
+  }
+
   Fn.prototype = obj
   return new Fn()
 }

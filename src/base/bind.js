@@ -21,3 +21,5 @@ Function.prototype.myBind = function () {
   // 返回闭包函数
   return fBound;
 }
+
+

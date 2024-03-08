@@ -33,3 +33,13 @@ function myNewPlus(Func, ...args) {
   // 判断返回值
   return typeof res === 'object' ? res : instance
 }
+
+
+function mNew(Fn, ...args) {
+  let instance = {}
+  if (Fn.prototype) {
+    instance.__proto__ = Fn.prototype
+  }
+  const res = Fn.apply(instance, args)
+  return res && typeof res === 'object' || typeof res === 'function' ? res : instance
+}

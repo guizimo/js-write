@@ -47,3 +47,17 @@ Function.prototype.myApplyPlus = function (thisArg, args) {
   // 返回
   return res
 }
+
+
+Function.prototype.mApply = function(content) {
+  if (typeof this !== 'function') {
+    throw new Error('error')
+  }
+  let newThis = content || window
+  let args = arguments[1]
+  const fn = Symbol()
+  newThis[fn] = this
+  let res = newThis[fn](...args)
+  delete newThis[fn]
+  return res
+}

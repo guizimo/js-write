@@ -46,3 +46,17 @@ Function.prototype.myCallPlus = function () {
   // 返回
   return res
 }
+
+
+Function.prototype.mCall = function () {
+  if (typeof this !== 'function') {
+    throw new Error('type error')
+  }
+  let args = Array.from(arguments)
+  let newThis = args.shift() || window
+  let fn = Symbol()
+  newThis[fn] = this
+  let res = newThis[fn](...args)
+  delete newThis[fn]
+  return res
+}

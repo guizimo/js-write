@@ -17,3 +17,13 @@ const myInstanceof = (obj, constructor) => {
     proto = Object.getPrototypeOf(proto)
   }
 }
+
+const mInstanceof = (obj, constructor) => {
+  let  proto = Object.getPrototypeOf(obj)
+  const prototype = constructor.prototype
+  while (true) {
+    if (!proto) return false
+    if (prototype === proto) return true
+    proto = Object.getPrototypeOf(proto)
+  }
+}
