@@ -1,4 +1,4 @@
-/**
+instanceof/**
  * 将传入的对象作为原型
  * @param obj
  * @returns {Fn}

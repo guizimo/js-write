@@ -2,20 +2,20 @@
 
 ## JS基础
 
-1. [手写Object.create](./demo/base/craete.html)
-2. [手写instanceof](./demo/base/instanceof.html)
-3. [手写new](./demo/base/new.html)
-4. [手写call](./demo/base/call.html)
-5. [手写apply](./demo/base/apply.html)
-6. [手写bind](./demo/base/bind.html)
-7. [手写类型判断](./demo/base/getType.html)
+1. **手写Object.create**： [代码](./src/base/create.js)、[调试](./demo/base/craete.html)
+2. **手写instanceof**：[代码](./src/base/instanceof.js)、[调试](./demo/base/instanceof.html)
+3. **手写new**：[代码](./src/base/new.js)、[调试](./demo/base/new.html)
+4. **手写call**：[代码](./src/base/call.js)、[调试](./demo/base/call.html)
+5. **手写apply**：[代码](./src/base/apply.js)、[调试](./demo/base/apply.html)
+6. **手写new**：[代码](./src/base/bind.js)、[调试](./demo/base/bind.html)
+7. **手写getType**：[代码](./src/base/getType.js)、[调试](./demo/base/getType.html)
 
 ## JS场景题
 
-1. [手写防抖](./demo/business/debounce.html)
-2. [手写节流](./demo/business/throttle.html)
-3. [手写浅拷贝和深拷贝](./demo/business/shallowCopyOrDeepCopy.html)
-
+1. **手写防抖**： [代码](./src/business/debounce.js)、[调试](./demo/business/debounce.html)
+2. **手写节流**： [代码](./src/business/throttle.js)、[调试](./demo/business/throttle.html)
+3. **手写浅拷贝**： [代码](./src/business/shallowCopy.js)、[调试](./demo/business/shallowCopyOrDeepCopy.html)
+4. **手写深拷贝**： [代码](./src/business/deepCopy.js)、[调试](./demo/business/shallowCopyOrDeepCopy.html)
 
 
 ## 待实现
